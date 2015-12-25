@@ -24,3 +24,13 @@ git checkout branch-A
 
 --another-branch
 >>>>>>> another-branch
+
+haha,so interesting
+git log --graph
+
+git checkout -
+git merge --no-ff another-branch # then conflict
+
+
+
+
