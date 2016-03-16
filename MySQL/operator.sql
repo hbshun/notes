@@ -34,10 +34,10 @@ XOR
 
 
 select 'abcded' regexp '[ce]';
-select 'abcded' regexp '^abc';
-select 'abcded' regexp 'abc.ed';
-select 'abcded' regexp 'c*';
-select 'abcded' regexp 't*';/**??????*/
+
+
+
+
 
 
 
