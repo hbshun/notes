@@ -29,3 +29,34 @@ show index from table_name
 alter table table_name drop index index_name
 drop index index_name on table_name
 */
+
+use employees;
+
+alter table employees
+add index index_hire_date (hire_date desc);
+
+show index from employees;
+
+explain select * 
+from employees
+order by hire_date;
+
+drop index index_hire_date on employees;
+
+select * 
+from employees
+order by hire_date asc
+limit 0,300000;
+/*感觉没有变化 是不是写的有错误？*/
+
+/*再来一个*/
+alter table employees
+add index index_first_name (first_name);
+
+drop index index_first_name on employees;
+
+select * 
+from employees
+order by first_name
+limit 0,300000;
+/*这个可以哦 0.25s/0.515s*/
