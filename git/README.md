@@ -30,7 +30,3 @@ git log --graph
 
 git checkout -
 git merge --no-ff another-branch # then conflict
-
-
-
-
