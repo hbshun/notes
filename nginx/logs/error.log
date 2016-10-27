@@ -1,0 +1,18 @@
+2016/10/14 16:11:54 [error] 30205#0: *1 open() "/Users/hbshun/nginx_demo/html/a.js" failed (2: No such file or directory), client: 127.0.0.1, server: s.localhost, request: "GET /a.js HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2016/10/14 16:12:02 [error] 30205#0: *1 open() "/Users/hbshun/nginx_demo/html/a.js" failed (2: No such file or directory), client: 127.0.0.1, server: s.localhost, request: "GET /a.js HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2016/10/14 16:12:41 [error] 30205#0: *1 access forbidden by rule, client: 127.0.0.1, server: s.localhost, request: "GET /sub/ HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2016/10/14 16:13:18 [error] 30205#0: *1 open() "/Users/hbshun/nginx_demo/html/a.js" failed (2: No such file or directory), client: 127.0.0.1, server: s.localhost, request: "GET /a.js HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2016/10/14 16:14:45 [notice] 30705#0: signal process started
+2016/10/14 16:16:42 [error] 30707#0: *7 user "name" was not found in "/Users/hbshun/nginx_demo/conf/secret", client: 127.0.0.1, server: s.localhost, request: "GET /secret/ HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2016/10/14 16:17:09 [error] 30707#0: *7 user "name" was not found in "/Users/hbshun/nginx_demo/conf/secret", client: 127.0.0.1, server: s.localhost, request: "GET /secret/ HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2016/10/14 16:17:20 [error] 30707#0: *7 user "name" was not found in "/Users/hbshun/nginx_demo/conf/secret", client: 127.0.0.1, server: s.localhost, request: "GET /secret/ HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2016/10/14 16:17:55 [error] 30707#0: *7 user "name1": password mismatch, client: 127.0.0.1, server: s.localhost, request: "GET /secret/ HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2016/10/14 16:18:34 [notice] 31093#0: signal process started
+2016/10/14 16:18:41 [error] 31094#0: *8 access forbidden by rule, client: 127.0.0.1, server: s.localhost, request: "GET /index1.html HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2016/10/14 16:19:36 [error] 31094#0: *8 access forbidden by rule, client: 127.0.0.1, server: s.localhost, request: "GET /sub/ HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2016/10/14 16:22:40 [notice] 31550#0: signal process started
+2016/10/14 16:26:30 [notice] 32019#0: signal process started
+2016/10/14 16:26:42 [error] 32031#0: *1 invalid port in upstream "127.0.0.1:", client: 127.0.0.1, server: *.express.localhost, request: "GET /socket.io/?EIO=3&transport=polling&t=LV2JESW HTTP/1.1", host: "paint.localhost", referrer: "http://paint.localhost/"
+2016/10/14 16:26:50 [error] 32031#0: *2 invalid port in upstream "127.0.0.1:", client: 127.0.0.1, server: *.express.localhost, request: "GET / HTTP/1.1", host: "express.localhost"
+2016/10/14 16:29:14 [notice] 32338#0: signal process started
+2016/10/14 16:37:35 [notice] 33231#0: signal process started
