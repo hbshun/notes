@@ -1,0 +1,7 @@
+127.0.0.1 - - [25/Sep/2017:16:58:30 +0800] "GET / HTTP/1.1" 200 231 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36" "-"
+127.0.0.1 - - [25/Sep/2017:16:58:30 +0800] "GET /favicon.ico HTTP/1.1" 200 25679 "http://localhost:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36" "-"
+127.0.0.1 - - [25/Sep/2017:16:58:54 +0800] "GET /test HTTP/1.1" 200 21 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36" "-"
+127.0.0.1 - - [25/Sep/2017:16:59:59 +0800] "GET /test HTTP/1.1" 200 21 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36" "-"
+127.0.0.1 - - [25/Sep/2017:17:51:49 +0800] "GET /test HTTP/1.1" 200 21 "-" "curl/7.54.0" "-"
+127.0.0.1 - - [25/Sep/2017:17:52:26 +0800] "GET /test HTTP/1.1" 200 21 "-" "curl/7.54.0" "-"
+127.0.0.1 - - [25/Sep/2017:17:52:31 +0800] "GET /test HTTP/1.1" 200 42 "-" "curl/7.54.0" "-"

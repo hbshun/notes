@@ -1,6 +1,11 @@
 # Install 
 
 ```
+brew install nginx
+
+```
+
+```
 $ wget http://nginx.org/download/nginx-1.10.1.tar.gz
 $ tar -zxvf nginx-1.10.1.tar.gz
 $ cd nginx-1.10.1
@@ -26,8 +31,6 @@ $ ls *
   
   sbin:
   nginx
-  
-$ yes yes
   
 ```
 
@@ -71,12 +74,12 @@ nginx -s SIGNAL
 kill -SIGNAL PID
 ```
 
-nginx SIGNAL|kill SIGNAL
-----|----
-stop|
-quit|
-reopen|
-reload|
+| nginx SIGNAL | kill SIGNAL |
+| ------------ | ----------- |
+| stop         |
+| quit         |
+| reopen       |
+| reload       |
 
 
 

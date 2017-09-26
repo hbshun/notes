@@ -11,7 +11,6 @@
   * URL Rewrite
   * HTTP Basic Auth
   * Gzip
-  * :zzz:
   
 * 特点
   * 开源
@@ -20,7 +19,6 @@
   * 性能好
   * 稳定
   * 热部署
-  * :zzz:
   
   
 ## http
