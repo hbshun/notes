@@ -79,6 +79,24 @@ print(#str) --the length of str;
 print(10 .. 20)
 print(type(10 .. 20))
 
+print(string.upper)
+--[=[
+string.upper(argument)
+string.lower(argument)
+string.gsub(mainString,findString,replaceString,num)
+string.find (str, substr, [init, [end]])
+string.reverse(arg)
+string.format(...)
+string.char(arg)
+string.byte(arg[,int])
+string.len(arg)
+string.rep(string, n)
+string.gmatch(str, pattern)
+string.match(str, pattern, init)
+]=]
+
+
+
 
 
 print("~~~~~~~~~~table~~~~~~~~~~~~")
@@ -124,7 +142,19 @@ function(key,val)--匿名函数
 end
 );
 
-print("~~~~~~~~~~data type~~~~~~~~~~~~")
+print("~~~~~~~~~~operator~~~~~~~~~~~~")
+--[[
+^
+not    - (unary)
+*      /
++      -
+..
+<      >      <=     >=     ~=     ==
+and
+or
+--]]
+
+
 print("~~~~~~~~~~data type~~~~~~~~~~~~")
 print("~~~~~~~~~~data type~~~~~~~~~~~~")
 print("~~~~~~~~~~data type~~~~~~~~~~~~")
