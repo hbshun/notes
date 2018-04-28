@@ -1,6 +1,6 @@
 print("Hello,world");
 -- comment
---
+--print("sss");
 --
 --[[
 comment1

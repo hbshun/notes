@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<script type="application/javascript">
+  'use strict';
+
+  let arr = [
+
+    {
+      "name": "321/222/333/",
+      "hash": "d41d8cd98f00b204e9800998ecf8427e",
+      "bytes": 0,
+      "last_modified": "2017-12-16T10:28:23.691Z"
+    },
+    {
+      "name": "321/222/333/3.0.json",
+      "hash": "d41d8cd98f00b204e9800998ecf8427e",
+      "bytes": 0,
+      "content_type": "application/json",
+      "last_modified": "2017-12-18T10:19:05.531Z"
+    },
+    {
+      "name": "321/222/333/4444/",
+      "hash": "d41d8cd98f00b204e9800998ecf8427e",
+      "bytes": 0,
+      "last_modified": "2017-12-16T10:28:29.057Z"
+    },
+    {
+      "name": "321/222/333/5555/60server.json",
+      "hash": "d41d8cd98f00b204e9800998ecf8427e",
+      "bytes": 0,
+      "content_type": "application/json",
+      "last_modified": "2017-12-18T10:20:12.655Z"
+    },
+    {
+      "name": "321/222/333/太阳.png",
+      "hash": "d41d8cd98f00b204e9800998ecf8427e",
+      "bytes": 0,
+      "content_type": "application/json",
+      "last_modified": "2017-12-18T09:56:49.771Z"
+    },
+    {
+      "name": "321/222/RPM打包 2(1).pages",
+      "hash": "ab476d6d477feddc59b3c00f63046621",
+      "bytes": 222088,
+      "last_modified": "2017-12-16T10:28:18.310Z"
+    },
+    {
+      "name": "321/RPM打包 2(1).pages",
+      "hash": "d41d8cd98f00b204e9800998ecf8427e",
+      "bytes": 0,
+      "content_type": "application/json",
+      "last_modified": "2017-12-18T09:46:30.202Z"
+    },
+    {
+      "name": "666/3.0new.json",
+      "hash": "a501760379b5f644b8d4fcc78bd9b999",
+      "bytes": 1841,
+      "last_modified": "2017-12-18T13:52:49.792Z"
+    },
+    {
+      "name": "321/bug清单.numbers",
+      "hash": "7fe0e9462889405558be03ab6b022690",
+      "bytes": 181052,
+      "last_modified": "2017-12-16T09:52:52.925Z"
+    },
+    {
+      "name": "321/222/",
+      "hash": "d41d8cd98f00b204e9800998ecf8427e",
+      "bytes": 0,
+      "last_modified": "2017-12-16T10:21:00.816Z"
+    },
+    {
+      "name": "666/4/3.0.json",
+      "hash": "d41d8cd98f00b204e9800998ecf8427e",
+      "bytes": 0,
+      "content_type": "application/json",
+      "last_modified": "2017-12-18T10:25:15.055Z"
+    },
+    {
+      "name": "bug清单.numbers",
+      "hash": "d41d8cd98f00b204e9800998ecf8427e",
+      "bytes": 0,
+      "content_type": "application/json",
+      "last_modified": "2017-12-18T09:42:40.335Z"
+    },
+    {
+      "name": "太阳.png",
+      "hash": "84694ee73d86ae0bfe2dfeab12ec1429",
+      "bytes": 7021,
+      "last_modified": "2017-12-19T08:12:28.285Z"
+    }
+  ];
+
+  let tree = Object.create(null);
+  tree.files = Object.create(null);
+  tree.deepFiles = [].concat(arr);
+  tree.type = tree.ext = 'container';
+
+  const getFather = (way) => {
+    let result = tree;
+    if (way.length === 0) {
+      return result;
+    }
+    let paths = way.join('.files.');
+    paths = `files.${paths}`;
+
+    paths = paths.split('.');
+    for (let i in paths) {
+      result = result[paths[i]];
+    }
+    return result;
+
+  };
+  arr.forEach(file => {
+
+    let dirs = file.name.split('/');
+
+    dirs.forEach((dir, index) => {
+      if (dir === '') return;
+      let way = dirs.slice(0, index);
+
+      let father = getFather(way);
+
+      let item = Object.create(null);
+      item.name = dir;
+      item.path = way.concat(dir).join('/');
+      if (index < dirs.length - 1) {
+        item.time = new Date(0);
+        item.size = 0;
+        item.type = 'directory';
+        item.ext = 'Folder';
+        item.files = Object.create(null);
+        item.deepFiles = father.deepFiles.filter(originFile => {
+          if (originFile.name.indexOf(item.path) === 0) {
+            item.size += originFile.bytes;
+            let date = new Date(originFile.last_modified);
+            if (date > item.time) {
+              item.time = date;
+            }
+            return true;
+          }
+        });
+
+      } else {
+        item.time = file.last_modified;
+        item.size = file.bytes;
+        item.type = 'file';
+        item.ext = dir.replace(/.+\./, '');
+      }
+      if (!father.files[dir]) {
+        father.files[dir] = item;
+      }
+
+    })
+
+  });
+
+  console.log(tree);
+
+
+</script>
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-# Introduction
+## Nginx Introduction
 
 * 是web服务器
 * 功能：
@@ -19,8 +19,7 @@
   * 性能好
   * 稳定
   * 热部署
+  * 模块化（标准、第三方）
+  * 配置化 微型编程语言
   
-  
-## http
-
-http
+## openresty 介绍
