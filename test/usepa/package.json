@@ -1,0 +1,16 @@
+{
+  "name": "usepa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "hbshun <bb@bbyy.me>",
+  "license": "WTFPL",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "pa": "github:hbshun/pa#8f636b6678e2905dc1f764a47a8be839bbc90f43"
+  }
+}
