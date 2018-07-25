@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <script>
+      (function () {
+        /* 判断pc浏览器 */
+        function isInBrowserList() {
+
+          var userAgent = navigator.userAgent.toLowerCase();
+          var version;
+
+          // Firefox 1.0+
+          var isFirefox = typeof InstallTrigger !== 'undefined';
+
+          // Safari 3.0+ "[object HTMLElementConstructor]" 
+          var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+
+          // Internet Explorer 6-11
+          var isIE = /*@cc_on!@*/false || !!document.documentMode;
+
+          // Edge 20+
+          var isEdge = !isIE && !!window.StyleMedia;
+
+          // Chrome 1+
+          var isChrome = !!window.chrome && !!window.chrome.webstore;
+
+          if (isEdge) {
+            return true;
+          }
+          if (isFirefox) {
+            return judgeVersion(userAgent, /firefox\/\d+/, 35);
+          }
+          if (isChrome) {
+            return judgeVersion(userAgent, /chrome\/\d+/, 45);
+          }
+          if (isSafari) {
+            return judgeVersion(userAgent, /version\/\d+/, 7);
+          }
+          return false;
+        }
+
+        function getVersion(ua, regx) {
+          var tem = ua.match(regx);
+          return Number(tem[0].match(/\d+/)[0]);
+        }
+
+        function judgeVersion(ua, regx, ver) {
+          var version = getVersion(ua, regx);
+          if (version > ver) {
+            return true;
+          }
+        }
+
+        /* 判断移动设设备 */
+        var isMobile = false;
+
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            isMobile = true;
+          }
+          
+        /* 综合判断:如果不是移动端且不满足pc端浏览器的限制 */
+
+        if (!isMobile && !isInBrowserList()) {
+          window.location = '/browser-invalid';
+        }
+        
+      }());
+    </script>
+    <%= HAHA %>
+  </head>
+  <body>
+    <div id="container"></div>
+  <script type="text/javascript" src="index_bundle.js"></script></body>
+</html>
