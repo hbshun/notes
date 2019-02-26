@@ -205,15 +205,31 @@
  * if (condition) {} else {}
  * if (condition) {} else if() {}
  * if (condition) {} else if() {} else {}
+ * condition表达式的结果必须是boolean型值
+ * 
  * switch(expression)
  *   case value1:
  * expression 需要时byte，short，int，char，枚举或String（JDK7新增）
  * case值不允许重复
  * default是可选的
+ * switch比大量的if-else性能更好
+ * 匹配字符串会更耗时相对于整数
+ * 只能执行相等性测试
+ * 编译器检查每个case常量，并创建“跳转表”，
  * 
  * 迭代语句
+ * for
+ * for( ; ; ) { }
+ * for(type item: collection) { }
+ * while  可以没有循环体
+ * do while
  * 
  * 跳转语句
+ * break
+ * 用于switch结构中
+ * 退出循环，嵌套循环只退出内层
+ * continue
+ * return
  * 
  */
 
@@ -321,6 +337,7 @@ public class Hello {
         } else {
             System.out.println("w4 != 1");
         }
+        //if (w4) {}//error: incompatible types: int cannot be converted to boolean
 
         System.out.println("w4 != 1");
         
@@ -349,6 +366,17 @@ public class Hello {
             System.out.println((int)("switch".substring(1).charAt(i)));
         }
 
+        int big = 100, small = 25;
+        while (--big > ++small);
+        System.out.println(big);
+
+        big = 100;
+        small = 1;
+        for (;;) {
+            if (--big < ++small)
+                break;
+        }
+        System.out.println(big);
     }
 }
 
