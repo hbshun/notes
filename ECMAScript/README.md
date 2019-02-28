@@ -1,4 +1,4 @@
-# javascript
+# ECMAScript
 
 javascript/ECMAScript
 >引用两则名言坐镇：
