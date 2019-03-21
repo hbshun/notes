@@ -1,4 +1,4 @@
-# javascript
+# ECMAScript
 
 javascript/ECMAScript
 >引用两则名言坐镇：
@@ -16,6 +16,11 @@ Douglas Crockford《JavaScript: The Good Parts》
 ```
 
 
+# Thanks
+
+学习过程中参考了一下书籍或文章，在此列举，谢过：
+
+* https://juejin.im/post/5c19c1b6e51d451d1e06c163
 
 # 关键字
 * let 
