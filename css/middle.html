@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  .wp {
+    border: 1px solid red;
+    width: 140px;
+    height: 180px;
+  }
+  .box {
+      background: green;
+  }
+  .size{
+      width: 80px;
+      height: 50px;
+  }
+  </style>
+</head>
+<body>
+  <style>
+  #wp1{
+    position: relative;
+  }
+  #box1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -40px;
+    margin-top: -25px;
+  }
+  </style>
+  <div id="wp1" class="wp">
+    <div id="box1" class="box size">123123</div>
+  </div>
+
+
+
+  <style>
+    #wp2{
+      position: relative;
+    }
+    #box2{
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  </style>
+  <div id="wp2" class="wp">
+    <div id="box2" class="box size">123123</div>
+  </div>
+
+
+
+  <style>
+    #wp3 {
+      position: relative;
+    }
+    #box3 {
+        position: absolute;
+        top: calc(50% - 25px);
+        left: calc(50% - 40px);
+    }
+  </style>
+  <div id="wp3" class="wp">
+    <div id="box3" class="box size">123123</div>
+  </div>
+
+
+
+  <style>
+  #wp4 {
+    position: relative;
+  }
+  #box4 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+  </style>
+  <div id="wp4" class="wp">
+    <div id="box4" class="box">123123</div>
+  </div>
+
+
+  <style>
+    #wp5 {
+      line-height: 180px;
+      text-align: center;
+      font-size: 0px;
+    }
+    #box5 {
+      font-size: 16px;
+      line-height: initial;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  </style>
+  <div id="wp5" class="wp">
+    <div id="box5" class="box">text5有疑问</div>
+  </div>
+
+  <style>
+    #wp6{
+      text-align: center;
+    }
+    #box6{
+      display: inline-block;
+    }
+  </style>
+  <table>
+      <tbody>
+          <tr>
+              <td id="wp6" class="wp">
+                sfasfwer
+              </td>
+          </tr>
+      </tbody>
+  </table>
+
+
+  <style>
+    #wp7 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+  <div id="wp7" class="wp">
+    <div id="box7" class="box">text</div>
+  </div>
+
+  <div id="wp8" class="wp">
+    <div id="box8" class="box">text</div>
+  </div>
+  <style>
+    #wp8 {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+  #box8 {
+    display: inline-block;
+  }
+  </style>
+</body>
+</html>
