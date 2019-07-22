@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Canvas</title>
+</head>
+<body>
+  <h1>Canvas</h1>
+  <p>CanvasRenderingContext2D对象</p>
+
+  <canvas id="canvas"></canvas>
+
+  <script>
+  const canvas = document.getElementById('canvas');
+  const context = canvas.getContext('2d');
+  context.fillStyle = '#f00';
+  context.fillRect(0, 0, 10, 10);
+  </script>
+</body>
+</html>
