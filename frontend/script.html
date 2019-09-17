@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const start = new Date();
+  </script>
+  <script type="module" src="https://cdn.bootcss.com/vue/2.6.10/vue.esm.browser.js"></script>
+  
+  <script defer src="https://cdn.bootcss.com/react/16.8.6/umd/react.production.min.js"></script>
+  <script>
+    console.log(11, new Date() - start, 'script', window.React, window.Vue);
+  </script>
+
+
+  <script type="module">
+    //这里不会立即执行，要等import的东西加载完成之后，才执行整个script代码
+    //如果import失败了，整段代码都不执行
+    console.log(12.1, new Date() - start, 'module');
+    import Vue from 'https://cdn.bootcss.com/vue/2.6.10/vue.esm.browser.min.js';
+    console.log(12.2, new Date() - start, 'import', Vue);
+
+    import 'https://cdn.bootcss.com/lodash.js/4.17.0/lodash.js';
+
+    console.log(12.3, new Date() - start, 'import 2');
+
+    import('https://cdn.bootcss.com/vue-router/3.0.6/vue-router.esm.browser.min.js').then(vr => {
+      console.log(12.4, new Date() - start, 'import()', vr);
+    }).catch(err => {
+      console.error(12.4, new Date() - start, 'import()', err);
+    });
+    console.log(12.5, new Date() - start);
+  </script>
+
+  <script>
+    console.log(13, new Date() - start, 'script');
+  </script>
+
+  <script defer>
+  console.log(window.React)
+  </script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+/*
+文本格式
+text-align: justify left right start end center;
+text-align-last: 同上;
+text-decoration-line: solid dashed dotted double wavy
+text-decoration-style: underline line-through overline
+text-decoration-color
+text-decoration-skip-ink: auto none
+text-underline-postion: under
+text-transform: captitalize lowercase uppercase
+text-indent 长度
+text-overflow: ellipsis clip
+word-wrap: break-word break-all keep-all
+word-break: break-all break-word
+overflow-wrap: break-word
+
+direction: rtl ltr
+
+letter-spacing 0 2px -1px  不能用百分比
+word-spacing
+white-space
+
+line-height: 1.2 200% 16px
+
+text-shadow:2px 2px #FF0000;
+
+vertical-align baseline middle top buttom text-top https://developer.mozilla.org/zh-CN/docs/Web/CSS/vertical-align
+
+字体
+无衬线serif 有衬线字体sans-serif
+font-family
+font-style normal italic
+font-size
+font-variant
+
+自定义电脑上未安装的字体
+@font-face
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(sansation_light.woff);
+  font-stretch
+  font-style
+  font-weight
+  unicode-range
+}
+
+div {
+    font-family:myFirstFont;
+}
+
+伪类选择器
+a:link
+a:visited
+a:hover
+a:active
+
+列表
+list-style
+list-style-color
+list-style-type
+list-style-image 用一个图片
+list-style-position outside inside
+
+
+盒模型 margin border padding content
+border
+
+border-color
+border-image
+border-width: thin medium thick
+border-style: none dotted dashed solid double ridge inset outset hidden
+
+border-buttom
+border-top
+border-right
+border-left
+
+border-radius lenght %  圆角不一定是正圆的弧
+border-bottom-right-radius
+border-bottom-left-radius
+border-top-right-radius
+border-top-left-radius
+
+border-block
+border-inline
+
+
+outline
+outline-style
+outline-width
+outline-color
+轮廓与边框在以下几个方面存在不同：轮廓不占据空间，它们被描绘于内容之上；轮廓可以是非矩形的。轮廓不能设置四个方向。
+
+margin
+宽度、四向
+没有color和style
+
+padding
+宽度、四向
+没有color和style
+
+阴影
+box-shadow: 10px 10px 5px #888888;
+box-shadow: h-shadow v-shadow blur spread color inset;
+
+
+尺寸
+height  设置元素的高度。auto, max-content, fit-content, min-content
+line-height  设置行高。
+max-height  设置元素的最大高度。
+max-width  设置元素的最大宽度。
+min-height  设置元素的最小高度。
+min-width  设置元素的最小宽度。
+width  设置元素的宽度。
+
+box-sizing: content-box  border-box 告诉浏览器怎么计算box的尺寸。
+
+clip 废弃
+clip-path 实验
+
+颜色
+rgb
+rgba
+hsl
+hsla
+transparent
+
+透明
+opacity 属性值从0.0 - 1.0。值越小，使得元素更加透明。
+
+渐变
+linear-gradient
+radial-gradient
+repeating-linear-gradient
+repeating-radial-gradient
+
+显示 隐藏
+visibility: hidden visible collapse
+display: inline, block, flex, table, inline-*, 
+
+
+定位
+static 默认值
+relative
+fixed
+absolute
+sticky
+
+z-index高度
+top
+buttom
+left
+right
+
+overflow: hidden, auto, scroll, visible
+overflow-x
+overflow-y
+
+clip
+
+光标cursor
+auto
+crosshair
+default
+help
+move
+pointer
+progress
+text
+wait
+resize 东e南s西w北n: e-resize n-resize ne-resize nw-resize s-resize se-resize sw-resize w-resize
+
+float
+clear
+
+
+转换
+transform
+transform-origin
+transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
+transform: translate(12px, 50%);
+transform: translateX(2em);
+transform: translateY(3in);
+transform: scale(2, 0.5);
+transform: scaleX(2);
+transform: scaleY(0.5);
+transform: rotate(0.5turn);
+transform: skew(30deg, 20deg);
+transform: skewX(30deg);
+transform: skewY(1.07rad);
+transform: matrix3d(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0);
+transform: translate3d(12px, 50%, 3em);
+transform: translateZ(2px);
+transform: scale3d(2.5, 1.2, 0.3);
+transform: scaleZ(0.3);
+transform: rotate3d(1, 2.0, 3.0, 10deg);
+transform: rotateX(10deg);
+transform: rotateY(10deg);
+transform: rotateZ(10deg);
+transform: perspective(17px);
+transform: translateX(10px) rotate(10deg) translateY(5px);
+
+
+过渡
+transition
+transition-delay
+transition-property
+transition-duration
+transition:width 2s, height 2s, background-color 2s, transform 2s;
+
+动画
+@keyframes 定义动画
+animation 使用动画
+animation-name 规定 @keyframes 动画的名称。
+animation-duration 规定动画完成一个周期所花费的秒或毫秒。默认是 0。
+animation-timing-function 规定动画的速度曲线。默认是 "ease"。
+nimation-fill-mode 规定当动画不播放时（当动画完成时，或当动画有一个延迟未开始播放时），要应用到元素的样式。
+animation-delay 规定动画何时开始。默认是 0。
+animation-iteration-count 规定动画被播放的次数。默认是 1。
+animation-direction 规定动画是否在下一周期逆向地播放。默认是 "normal"。
+animation-play-state 规定动画是否正在运行或暂停。默认是 "running"。
+
+
+选择器
+标签
+类
+ID
+
+A E    元素A的任一后代元素E (后代节点指A的子节点，子节点的子节点，以此类推)
+A > E  元素A的任一子元素E(也就是直系后代)
+E:first-child   任一是其父母结点的第一个子节点的元素E
+B + E   元素B的任一下一个兄弟元素E
+B ~ E   B元素后面的拥有共同父元素的兄弟元素E
+分组选择器 div,h1,h2{}
+嵌套选择器
+伪类选择器
+
+后代选择器(以空格分隔) div p {}
+子元素选择器(以大于号分隔）div>p{}
+相邻兄弟选择器（以加号分隔，同级、相邻、下一个）div+p{}
+后续兄弟选择器（以破折号分隔，同级 后续，不一定相邻）
+属性选择器 [title] input[type="text"] 判断符号 ~=, *=, |=, ^=, $=, *=
+
+伪类、伪元素
+a
+a:link
+a:visited
+a:hover  必须被置于 a:link 和 a:visited 之后，才是有效的。
+a:active  必须被置于 a:hover 之后，才是有效的
+
+input
+:focus
+:checked
+:disabled
+:enabled
+:in-range
+:out-of-range
+:optional
+:required
+:read-only
+:read-write
+:invalid
+:valid
+
+
+:target
+
+通用
+:empty
+:first-child
+:last-child
+:nth-child()  odd, even, 3n+0
+:nth-last-child()
+:nth-last-of-type()
+:nth-of-type()
+:first-of-type
+:last-of-type
+:only-of-type
+:only-child
+:lang
+
+:first-letter
+:first-line
+
+:before
+:after
+
+单用
+:not()
+:root
+
+CSS 计数器
+counter-reset
+
+
+
+scroll-margin
+scroll-padding
+scroll-snap
+*/

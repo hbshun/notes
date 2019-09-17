@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>事件委托</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div>
+    <ul id="list">
+      <li>hahaha1<em>what em</em></li>
+      <li>hahaha1<em>what em</em></li>
+      <li>hahaha1<em>what em</em></li>
+      <li>hahaha1<em>what em</em></li>
+      <li>hahaha1<em>what em</em></li>
+      <li>hahaha1<em>what em</em></li>
+      <li>hahaha1<em>what em</em></li>
+      <li>hahaha1<em>what em</em></li>
+      <li>hahaha1<em>what em</em></li>
+      <li>hahaha1<em>what em</em></li>
+      <li>hahaha1<em>what em</em></li>
+    </ul>
+  </div>
+  
+  <script>
+    const list = document.getElementById('list');
+    console.log(list);
+    list.addEventListener('mouseover', function() {
+      console.log(33);
+    })
+    list.addEventListener('mouseover', function() {
+      console.log(4);
+    })
+    list.onmouseover = function(e) {
+      console.log(11);
+    }
+    list.onmouseover = function() {
+      console.log(22);
+    }
+    // 但是有个问题，如果，鼠标移到em上，那只有em的背景会变，li的背景不变，怎么办？
+  </script>
+</body>
+</html>
