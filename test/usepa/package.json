@@ -10,7 +10,7 @@
   "author": "hbshun <bb@bbyy.me>",
   "license": "WTFPL",
   "dependencies": {
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.21",
     "pa": "github:hbshun/pa#8f636b6678e2905dc1f764a47a8be839bbc90f43"
   }
 }
